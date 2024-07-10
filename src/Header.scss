@@ -1,0 +1,63 @@
+.header_navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 87px;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 2px solid rgba(90, 84, 84, 0.2);
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+  font-size: 16px;
+  font-weight: 700;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header_navigation a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header_left,
+.header_center,
+.header_right {
+  display: flex;
+  align-items: center;
+}
+
+.header_icon {
+  margin-right: 8px;
+}
+
+.header {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header_navigation a {
+  text-decoration: none;
+  color: inherit;
+  background-image: linear-gradient(to right, #ffba24b9, #ffb120b9 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.header_navigation a:hover {
+  background-position: 0;
+}
+
+.header_navigation a:hover::before {
+  width: 100%;
+}
+
+main {
+  padding-top: 87px; /* Отступ, чтобы контент не скрывался под хедером */
+}
