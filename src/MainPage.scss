@@ -29,29 +29,27 @@ nav div {
   gap: 20px;
 }
 
-.pizza-list {
+.pizza_card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between; /* Равномерное распределение пространства */
+  align-items: center;
+  width: 250px; /* Ширина карточки */
+  height: 450px; /* Фиксированная высота карточки */
+
   padding: 20px;
-}
-
-.pizza-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 300px;
-  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.pizza-card img {
+.pizza_card img {
   width: 100%;
   height: auto;
 }
 
-.pizza-card h3 {
+.pizza_card h3 {
   margin: 0;
   padding: 10px 0;
 }
@@ -61,7 +59,7 @@ nav div {
   padding: 0 10px;
 }
 
-.pizza-card button {
+.pizza_card button {
   background-color: #ff6600;
   color: #fff;
   border: none;
@@ -69,8 +67,9 @@ nav div {
   cursor: pointer;
   width: 100%;
   font-size: 16px;
+  border-radius: 10px;
 }
 
-.pizza-card button:hover {
+.pizza_card button:hover {
   background-color: #e65500;
 }

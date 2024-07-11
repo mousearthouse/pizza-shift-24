@@ -1,22 +1,24 @@
-const API_URL = 'https://shift-backend.onrender.com';
-import { Pizza } from '@/types/interfacesPizza';
-
-import './mainPage.scss';
+import './MainPage.scss';
 
 export interface PizzaCardProps {
   pizza: Pizza;
-  openModal: (id: number) => void;
+  openModal: (pizza: Pizza) => void;
 }
 
+export const API_URL = 'https://shift-backend.onrender.com';
+
 const PizzaCard = ({ pizza, openModal }: PizzaCardProps) => (
-  <div key={pizza.id} className="pizza_container">
+  <div key={pizza.id} className="pizza_card">
     <img src={`${API_URL}${pizza.img}`} alt={pizza.name} />
-    <div className="pizza_card">
+    <div>
       <div className="pizza_card_information">
         <h3>{pizza.name}</h3>
         <span>{pizza.description}</span>
       </div>
-      <button className="animated-button" onClick={() => openModal(pizza.id)}>
+      <div className="pizza_price">
+        <h3>от {pizza.sizes[0].price} ₽</h3>
+      </div>
+      <button className="animated-button" onClick={() => openModal(pizza)}>
         <span>Выбрать</span>
         <span></span>
       </button>
