@@ -1,0 +1,65 @@
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal_content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .modal_img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .sizes, .toppings {
+    margin: 20px 0;
+  }
+  
+  .size_button, .add_to_cart {
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .topping_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .topping_item img {
+    width: 50px;
+    height: 50px;
+  }
+  
