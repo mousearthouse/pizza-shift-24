@@ -12,8 +12,6 @@ const openModal = (pizza: Pizza) => {
 
 const MainPage: React.FC = () => {
   const [pizzas, setPizzas] = useState<Pizza[]>([]);
-  //const [loading, setLoading] = useState<boolean>(true);
-  //const [error, setError] = useState<string | null>(null);
   const [selectedPizza, setSelectedPizza] = useState<Pizza | null>(null);
 
   const handleDataLoaded = useCallback(async () => {
@@ -34,15 +32,23 @@ const MainPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='main'>
       <Header />
-      <main>
+      <div className='container_description'>
+          <div className='name'>
+            Мы - ШИФТ ПИЦЦА.
+          </div>
+          <div className='description'>
+            В приготовлении пиццы достигли космических высот - доставим даже на Марс! :)
+          </div>
+        </div>
+
         <div className="container_cards">
           {pizzas.map((pizza) => (
             <PizzaCard key={pizza.id} pizza={pizza} openModal={openModal} />
           ))}
         </div>
-      </main>
+
       <Modal pizza={selectedPizza} onClose={closeModal} />
     </div>
   );

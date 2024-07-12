@@ -1,30 +1,30 @@
 .modal {
     position: fixed;
-    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(5, 4, 27, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .modal_content {
-    background-color: #fff;
+    background-color: #f9f7f3;
     padding: 20px;
+    //margin: 20px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    max-height: 80%;
-    overflow-y: auto;
-    text-align: center;
+    max-width: 930px;
+    max-height: 640px;
+    display: flex;
+    flex-direction: row;
     position: relative;
+    overflow-y: auto;
   }
   
   .close {
-    position: absolute;
+    position: sticky;
     top: 10px;
     right: 20px;
     width: 24px;
@@ -32,15 +32,65 @@
     cursor: pointer;
   }
   
-  .modal_img {
-    width: 150px;
-    margin-bottom: 20px;
+  .modal_left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
   }
   
+  .modal_img {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    margin-top: 10px;
+  }
+  
+  .modal_right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+  }
+  
+.modal_right p {
+  color: #383877;
+}
+
   .sizes, .toppings {
     margin: 20px 0;
+    width: 100%;
   }
   
+  .sizes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .toppings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #292960;
+  }
+
+  .size_button {
+    flex: 1 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
   .size_button, .add_to_cart {
     background-color: #ff6600;
     border: none;
@@ -49,17 +99,41 @@
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
   }
   
+  .size_button:hover, .add_to_cart:hover {
+    background-color: #e65c00;
+  }
+
+  .add_to_cart {
+    position: sticky;
+    bottom: 0;
+  }
+
   .topping_item {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin: 10px 0;
+    padding: 10px;
+    width: 110px;
+    height: 140px;
+    border: 2px solid #32467690;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .topping_item.selected {
+    background-color: #32467690;
+    color: white;
   }
   
   .topping_item img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
   }
   

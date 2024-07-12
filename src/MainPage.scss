@@ -1,5 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 377;
+  font-style: normal;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,8 +10,36 @@ body {
 }
 
 .main {
-  padding: 20px;
+  background-color: #f9f7f3;
 }
+
+.name {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 10px;
+}
+
+.description {
+  margin: 10px;
+}
+
+.container_description {
+  font-size: 18px;
+  //display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  color: #232349;
+  text-align: center;
+  font-weight: semibold;
+  border: 2px solid #324676dc;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+
+
+}
+
 .container_cards {
   display: flex;
   justify-content: center;
@@ -16,6 +47,7 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
+  background-color: #f9f7f3;
 }
 
 nav {
@@ -38,10 +70,12 @@ nav div {
   height: 450px; /* Фиксированная высота карточки */
 
   padding: 20px;
-  border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  border: 1px solid #1d315e;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #494991;
   text-align: center;
+  color: #f9f7f3;
 }
 
 .pizza_card img {

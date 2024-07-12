@@ -4,8 +4,8 @@
   justify-content: space-between;
   height: 87px;
   width: 100%;
-  background-color: #fff;
-  border-bottom: 2px solid rgba(90, 84, 84, 0.2);
+  background-color: #f9f7f3;
+  border-bottom: 2px solid rgba(12, 0, 88, 0.2);
   padding: 0 20px;
   box-sizing: border-box;
   z-index: 1000;
@@ -40,8 +40,8 @@
 
 .header_navigation a {
   text-decoration: none;
-  color: inherit;
-  background-image: linear-gradient(to right, #ffba24b9, #ffb120b9 50%, #000 50%);
+  color: #494991;
+  background-image: linear-gradient(to right, #ec752be4, #ef9f0bf1 50%, #000 50%);
   background-size: 200% 100%;
   background-position: -100%;
   position: relative;

@@ -11,8 +11,9 @@ const PizzaCard = ({ pizza, openModal }: PizzaCardProps) => (
   <div key={pizza.id} className="pizza_card">
     <img src={`${API_URL}${pizza.img}`} alt={pizza.name} />
     <div>
+    <h3>{pizza.name}</h3>
       <div className="pizza_card_information">
-        <h3>{pizza.name}</h3>
+        
         <span>{pizza.description}</span>
       </div>
       <div className="pizza_price">
